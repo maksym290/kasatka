@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Касатка — Записи</title>
+  <link href="../dist/output.css" rel="stylesheet" />
+</head>
+<body class="flex min-h-screen bg-gray-100 text-gray-900">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-lg p-6 flex flex-col">
+    <div class="text-2xl font-bold mb-8">Касатка</div>
+    <nav class="space-y-4">
+      <a href="edit-profile.html" class="block hover:underline">Мій профіль</a>
+      <a href="edit-services.html" class="block hover:underline">Послуги</a>
+      <a href="edit-schedule.html" class="block hover:underline">Графік</a>
+      <a href="appointments.html" class="block hover:underline font-semibold">Записи</a>
+    </nav>
+    <footer class="mt-auto pt-6 text-sm text-gray-400">© Касатка</footer>
+  </aside>
+
+  <!-- Main -->
+  <main class="flex-1 p-8">
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h1 class="text-2xl font-semibold">Записи</h1>
+      </div>
+
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex gap-2">
+          <button id="prevPeriod" class="text-sm px-3 py-1 border rounded">◀️</button>
+          <div id="currentPeriod" class="text-sm font-medium flex items-center"></div>
+          <button id="nextPeriod" class="text-sm px-3 py-1 border rounded">▶️</button>
+        </div>
+
+        <div class="flex gap-2">
+          <button data-mode="day" class="mode-btn text-xs px-2 py-1 rounded border hover:bg-gray-100">День</button>
+          <button data-mode="week" class="mode-btn text-xs px-2 py-1 rounded border hover:bg-gray-100">Тиждень</button>
+          <button data-mode="month" class="mode-btn text-xs px-2 py-1 rounded border hover:bg-gray-100 bg-gray-200">Місяць</button>
+        </div>
+      </div>
+
+      <div id="appointmentsContainer" class="mt-4">
+        <!-- JS: вміст -->
+      </div>
+    </div>
+  </main>
+
+  <script src="js/appointments.js"></script>
+</body>
+</html>

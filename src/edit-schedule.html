@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Редагування графіку | Касатка</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="flex min-h-screen bg-gray-100 text-gray-900">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-lg p-6 flex flex-col">
+      <div class="text-2xl font-bold mb-8">Касатка</div>
+      <nav class="space-y-4">
+        <a href="index.html" class="block hover:underline">Мій профіль</a>
+        <a href="edit-services.html" class="block hover:underline">Послуги</a>
+        <a href="edit-schedule.html" class="block hover:underline">Графік</a>
+        <a href="#" class="block hover:underline">Записи</a>
+      </nav>
+      <footer class="mt-auto pt-6 text-sm text-gray-400">© Касатка</footer>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-8">
+      <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow">
+        <h1 class="text-2xl font-semibold mb-4">Редагування графіку роботи</h1>
+
+        <div id="scheduleContainer" class="space-y-3 mb-6"></div>
+
+        <button
+          id="saveSchedule"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Зберегти графік
+        </button>
+      </div>
+    </main>
+
+    <script src="js/edit-schedule.js"></script>
+  </body>
+</html>
