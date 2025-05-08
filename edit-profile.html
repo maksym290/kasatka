@@ -5,17 +5,38 @@
   <title>Редагування профілю — Касатка</title>
   <link href="dist/output.css" rel="stylesheet">
 </head>
-<body class="p-6 bg-gray-100">
-  <h2 class="text-xl font-bold mb-4">Мій профіль</h2>
+<body class="flex min-h-screen bg-gray-100 text-gray-900">
 
-  <input id="fullName" placeholder="Повне ім’я">
-  <input id="qualification" placeholder="Кваліфікація">
-  <input id="address" placeholder="Адреса">
-  <input id="instagram" placeholder="Instagram">
-  <input id="facebook" placeholder="Facebook">
-  <input type="file" id="avatar">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-lg p-6 flex flex-col">
+    <div class="text-2xl font-bold mb-8">Касатка</div>
+    <nav class="space-y-4">
+      <a href="edit-profile.html" class="block hover:underline">Мій профіль</a>
+      <a href="edit-services.html" class="block hover:underline">Послуги</a>
+      <a href="edit-schedule.html" class="block hover:underline">Графік</a>
+      <a href="index.html" class="block hover:underline">Записи</a>
+    </nav>
+    <footer class="mt-auto pt-6 text-sm text-gray-400">© Касатка</footer>
+  </aside>
 
-  <button id="saveProfile">Зберегти</button>
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+    <h2 class="text-2xl font-semibold mb-6">Мій профіль</h2>
+    <div class="space-y-4 max-w-md">
+
+      <input id="fullName" placeholder="Повне ім’я" class="w-full border rounded px-3 py-2" />
+      <input id="qualification" placeholder="Кваліфікація" class="w-full border rounded px-3 py-2" />
+      <input id="address" placeholder="Адреса" class="w-full border rounded px-3 py-2" />
+      <input id="instagram" placeholder="Instagram" class="w-full border rounded px-3 py-2" />
+      <input id="facebook" placeholder="Facebook" class="w-full border rounded px-3 py-2" />
+      <input type="file" id="avatar" class="w-full" />
+
+      <button id="saveProfile" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+        Зберегти
+      </button>
+
+    </div>
+  </main>
 
   <script type="module" src="js/edit-profile.js"></script>
 </body>
